@@ -1,29 +1,48 @@
-# @elonjask/proxypin-mcp
+# ProxyPin MCP (npx launcher)
 
-NPX launcher package for `proxypin-mcp` (Python MCP server on PyPI).
+A lightweight npx launcher for `proxypin-mcp` (Python MCP server). This package only starts the real server.
 
-## MCP config (Windsurf/Cursor/Claude Desktop)
+Language: English | 中文 see `README_CN.md` (if you want, I can add it)
+
+## Overview
+
+This package is a thin wrapper that runs:
+
+```bash
+uvx --from proxypin-mcp proxypin-mcp
+```
+
+It is meant for MCP clients that prefer `npx`-style configuration.
+
+## Quick Start
+
+```bash
+npx -y @elonjask/proxypin-mcp@latest
+```
+
+## MCP Client Config
 
 ```json
 {
   "mcpServers": {
     "proxypin": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@elonjask/proxypin-mcp@latest"
-      ]
+      "args": ["-y", "@elonjask/proxypin-mcp@latest"]
     }
   }
 }
 ```
 
-## Runtime requirement
+## Requirements
 
-- `uv` must be installed on the local machine (`uvx` command available).
+- `uv` installed (provides `uvx`)
+- `proxypin-mcp` published on PyPI
 
-This package only launches:
+## Notes
 
-```bash
-uvx --from proxypin-mcp proxypin-mcp
-```
+- This package does not bundle the Python server.
+- Use it only as a launcher.
+
+## License
+
+MIT
