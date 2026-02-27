@@ -1,0 +1,25 @@
+{
+  "name": "@elonjask/proxypin-mcp",
+  "version": "0.1.0",
+  "description": "NPX launcher for proxypin-mcp Python MCP server",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElonJask/proxypin-mcp.git",
+    "directory": "npm-bridge"
+  },
+  "homepage": "https://github.com/ElonJask/proxypin-mcp",
+  "bugs": {
+    "url": "https://github.com/ElonJask/proxypin-mcp/issues"
+  },
+  "bin": {
+    "proxypin-mcp": "bin/proxypin-mcp.js"
+  },
+  "files": [
+    "bin/proxypin-mcp.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
