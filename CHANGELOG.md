@@ -18,6 +18,7 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 - Simplified README and added `npx` launcher instructions + example.
 - Aligned README structure to ProxyPin style and split into English/Chinese docs.
 - Rewrote README to follow markmap-mcp-server style with detailed sections.
+- Set security contact email and removed `uv.lock` from the repo.
 
 ### Changed
 

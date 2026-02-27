@@ -15,7 +15,7 @@ Send a private report with:
 - impact assessment
 - optional patch suggestion
 
-Temporary contact: `security@example.com` (replace with your real mailbox before release).
+Security contact: `jiaeboy@gmail.com`.
 
 ## Sensitive Data Policy
 

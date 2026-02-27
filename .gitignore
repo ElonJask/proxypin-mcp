@@ -42,5 +42,8 @@ htmlcov/
 *.tar.gz
 *.whl
 
+# Lockfiles (dev-only)
+uv.lock
+
 # OS
 .DS_Store
