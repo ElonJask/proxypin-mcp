@@ -1,6 +1,6 @@
 # ProxyPin MCP [English](#english) | 中文
 
-ProxyPin 的 MCP 服务，把抓包历史数据提供给 AI 工具（Windsurf / Cursor / Claude Desktop / Codex）。
+ProxyPin 的 MCP 服务（配合 https://github.com/wanghongenpin/proxypin 使用），把抓包历史数据提供给 AI 工具（Windsurf / Cursor / Claude Desktop / Codex）。
 
 ## 使用前
 
@@ -101,7 +101,7 @@ python -m proxypin_mcp
 
 ## English
 
-ProxyPin MCP server that exposes local ProxyPin capture history to MCP-capable clients.
+ProxyPin MCP server (works with https://github.com/wanghongenpin/proxypin) that exposes local ProxyPin capture history to MCP-capable clients.
 
 ### Prerequisites
 
