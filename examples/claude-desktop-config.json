@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "proxypin": {
+      "command": "python",
+      "args": ["-m", "proxypin_mcp"]
+    }
+  }
+}

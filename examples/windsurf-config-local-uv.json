@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "proxypin": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/ABSOLUTE/PATH/TO/proxypin-mcp",
+        "run",
+        "proxypin-mcp"
+      ]
+    }
+  }
+}
