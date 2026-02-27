@@ -41,6 +41,7 @@ Pre-open-source hardening and standardization for `proxypin-mcp`.
 - Added an `npx` configuration example for MCP clients.
 - Aligned README sections with ProxyPin structure and split English/Chinese docs.
 - Consolidated example configs to `npx` only.
+- Rewrote README (EN/CN) to follow markmap-mcp-server style and add detailed sections.
 
 ### Pending
 

@@ -1,38 +1,42 @@
-# ProxyPin MCP
+# ProxyPin MCP Server
 
-ProxyPin MCP server for local capture history, designed to work with ProxyPin ([wanghongenpin/proxypin](https://github.com/wanghongenpin/proxypin)).
+![NPM Version](https://img.shields.io/npm/v/@elonjask/proxypin-mcp.svg) ![GitHub License](https://img.shields.io/github/license/ElonJask/proxypin-mcp.svg) ![Stars](https://img.shields.io/github/stars/ElonJask/proxypin-mcp.svg)
 
-Language: [English](README.md) | [中文](README_CN.md)
+ProxyPin MCP Server is based on the Model Context Protocol (MCP). It works with the open source project [ProxyPin](https://github.com/wanghongenpin/proxypin) to expose your local capture history to MCP-capable clients.
 
-## Open-source MCP for ProxyPin
+Docs: [English](README.md) | [中文](README_CN.md)
 
-Expose local ProxyPin history to MCP-capable clients (Windsurf / Cursor / Claude Desktop / Codex).
-
-## Core Features
+## Features
 
 - Read local ProxyPin history (HAR)
-- Token-efficient tools for list/search/detail
+- List/search/detail tools for captured requests
 - API structure analysis and code generation
-- Works with mainstream MCP clients
+- Works with mainstream MCP clients (Windsurf / Cursor / Claude Desktop / Codex)
 
-## Sponsor
+## Prerequisites
 
-- Star the repo or open an issue/PR if this helps
+1. Install and open ProxyPin
+2. In ProxyPin History settings, enable “Cache Date” (required)
+3. Ensure some capture history exists
+4. Node.js (for `npx`) and `uv` (for `uvx`)
 
-## Download
+## Installation
 
-### Run (npx)
+### Run with npx
 
 ```bash
 npx -y @elonjask/proxypin-mcp@latest
 ```
 
-### MCP config (npx)
+## Usage
+
+Add the following configuration to your MCP client configuration file:
 
 ```json
 {
   "mcpServers": {
     "proxypin": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "@elonjask/proxypin-mcp@latest"]
     }
@@ -40,12 +44,70 @@ npx -y @elonjask/proxypin-mcp@latest
 }
 ```
 
-### Notes
+> [!TIP]
+> If your client does not support `type`, remove the field.
 
-- Enable “Cache Date” in ProxyPin History (required)
-- Ensure some capture history exists
-- `uv` must be installed (the launcher calls `uvx --from proxypin-mcp proxypin-mcp`)
+## Environment Variables
+
+| Variable | Description | Default |
+|---|---|---|
+| `PROXYPIN_DATA_DIR` | ProxyPin history directory | auto-detect |
+| `PROXYPIN_HAR_LIMIT` | max HAR files scanned | `50` |
+| `PROXYPIN_MAX_BODY_SIZE` | max body bytes kept | `102400` |
+
+## Available Tools
+
+### list_requests
+
+List recent captured requests.
+
+Parameters:
+- `limit` (int, optional, default 20)
+- `detail` (string: `summary` | `key` | `full`)
+- `domain` (string, optional)
+- `method` (string, optional)
+- `status` (int, optional)
+
+### get_request
+
+Get a single request detail by ID.
+
+Parameters:
+- `request_id` (string, required)
+- `include_body` (boolean, optional, default true)
+
+### search_requests
+
+Search requests by keyword.
+
+Parameters:
+- `keyword` (string, required)
+- `search_in` (string: `all` | `url` | `request_body` | `response_body`)
+- `limit` (int, optional, default 20)
+
+### analyze_api
+
+Analyze API structure for a domain.
+
+Parameters:
+- `domain` (string, required)
+
+### get_domains
+
+List captured domains with counts.
+
+Parameters:
+- none
+
+### generate_code
+
+Generate API call code from a captured request.
+
+Parameters:
+- `request_id` (string, required)
+- `language` (string: `python` | `javascript` | `typescript` | `curl`)
+- `framework` (string: `requests` | `httpx` | `fetch` | `axios`)
 
 ## License
 
-MIT
+This project is licensed under the [MIT](./LICENSE) License.

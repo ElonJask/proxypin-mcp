@@ -17,6 +17,7 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 - Automated publishing workflow for PyPI (`.github/workflows/publish.yml`).
 - Simplified README and added `npx` launcher instructions + example.
 - Aligned README structure to ProxyPin style and split into English/Chinese docs.
+- Rewrote README to follow markmap-mcp-server style with detailed sections.
 
 ### Changed
 

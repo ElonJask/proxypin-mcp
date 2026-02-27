@@ -1,38 +1,42 @@
-# ProxyPin MCP
+# ProxyPin MCP Server
 
-ProxyPin MCP 服务（配合 [wanghongenpin/proxypin](https://github.com/wanghongenpin/proxypin) 使用），将本地抓包历史暴露给 MCP 客户端。
+![NPM Version](https://img.shields.io/npm/v/@elonjask/proxypin-mcp.svg) ![GitHub License](https://img.shields.io/github/license/ElonJask/proxypin-mcp.svg) ![Stars](https://img.shields.io/github/stars/ElonJask/proxypin-mcp.svg)
 
-语言切换：[English](README.md) | [中文](README_CN.md)
+ProxyPin MCP Server 基于 Model Context Protocol (MCP)，配合开源项目 [ProxyPin](https://github.com/wanghongenpin/proxypin) 使用，将本地抓包历史提供给 MCP 客户端。
 
-## 开源免费 MCP 服务
+文档切换：[English](README.md) | [中文](README_CN.md)
 
-面向 MCP 客户端（Windsurf / Cursor / Claude Desktop / Codex），读取本机 ProxyPin 抓包历史。
-
-## 核心特性
+## 功能特性
 
 - 读取本地 ProxyPin 历史（HAR）
-- 支持列表/搜索/详情等工具
+- 列表/搜索/详情等工具
 - API 结构分析与调用代码生成
-- 兼容主流 MCP 客户端
+- 兼容主流 MCP 客户端（Windsurf / Cursor / Claude Desktop / Codex）
 
-## 赞助
+## 使用前
 
-- 如果有帮助，欢迎 Star 或提 Issue / PR
+1. 安装并打开 ProxyPin
+2. 在 ProxyPin 的“历史”设置中开启“缓存日期”（必须）
+3. 确保已有抓包历史数据
+4. 安装 Node.js（用于 `npx`）与 `uv`（提供 `uvx`）
 
-## 下载地址
+## 安装方式
 
-### 启动方式（npx）
+### npx 启动
 
 ```bash
 npx -y @elonjask/proxypin-mcp@latest
 ```
 
-### MCP 配置（npx）
+## 使用方法
+
+在 MCP 客户端配置中添加：
 
 ```json
 {
   "mcpServers": {
     "proxypin": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "@elonjask/proxypin-mcp@latest"]
     }
@@ -40,12 +44,70 @@ npx -y @elonjask/proxypin-mcp@latest
 }
 ```
 
-### 使用说明
+> [!TIP]
+> 若客户端不支持 `type` 字段，请删除该字段。
 
-- 在 ProxyPin 的“历史”设置中开启“缓存日期”（必须）
-- 确保已有抓包历史数据
-- 本机需已安装 `uv`（启动器会调用 `uvx --from proxypin-mcp proxypin-mcp`）
+## 环境变量
+
+| 变量 | 说明 | 默认值 |
+|---|---|---|
+| `PROXYPIN_DATA_DIR` | ProxyPin 历史目录 | 自动探测 |
+| `PROXYPIN_HAR_LIMIT` | 最多扫描 HAR 文件数 | `50` |
+| `PROXYPIN_MAX_BODY_SIZE` | Body 最大保留字节数 | `102400` |
+
+## 可用工具
+
+### list_requests
+
+列出最近请求。
+
+参数：
+- `limit` (int, 可选, 默认 20)
+- `detail` (string: `summary` | `key` | `full`)
+- `domain` (string, 可选)
+- `method` (string, 可选)
+- `status` (int, 可选)
+
+### get_request
+
+根据 ID 获取单条请求详情。
+
+参数：
+- `request_id` (string, 必填)
+- `include_body` (boolean, 可选, 默认 true)
+
+### search_requests
+
+按关键词搜索请求。
+
+参数：
+- `keyword` (string, 必填)
+- `search_in` (string: `all` | `url` | `request_body` | `response_body`)
+- `limit` (int, 可选, 默认 20)
+
+### analyze_api
+
+按域名分析 API 结构。
+
+参数：
+- `domain` (string, 必填)
+
+### get_domains
+
+列出抓包域名及统计。
+
+参数：
+- 无
+
+### generate_code
+
+从抓包请求生成调用代码。
+
+参数：
+- `request_id` (string, 必填)
+- `language` (string: `python` | `javascript` | `typescript` | `curl`)
+- `framework` (string: `requests` | `httpx` | `fetch` | `axios`)
 
 ## License
 
-MIT
+本项目使用 [MIT](./LICENSE) 许可证。
