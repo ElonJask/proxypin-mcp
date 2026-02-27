@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "proxypin": {
+      "command": "npx",
+      "args": ["-y", "@elonjask/proxypin-mcp@latest"]
+    }
+  }
+}

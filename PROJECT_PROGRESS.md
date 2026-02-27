@@ -37,6 +37,8 @@ Pre-open-source hardening and standardization for `proxypin-mcp`.
   - `.github/workflows/publish.yml` for tag-triggered PyPI publishing via trusted publisher
 - Updated package metadata:
   - maintainer identity and repository URLs in `pyproject.toml`
+- Updated README to a simpler, ProxyPin-style usage flow and documented the required history cache setting.
+- Added an `npx` configuration example for MCP clients.
 
 ### Pending
 
