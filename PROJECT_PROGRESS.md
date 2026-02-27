@@ -44,6 +44,9 @@ Pre-open-source hardening and standardization for `proxypin-mcp`.
 - Rewrote README (EN/CN) to follow markmap-mcp-server style and add detailed sections.
 - Set security contact email in `SECURITY.md`.
 - Removed `uv.lock` from version control (kept in `.gitignore`).
+- Disabled automated security scanning/PR noise:
+  - removed `.github/workflows/codeql.yml`
+  - removed `.github/dependabot.yml`
 
 ### Pending
 

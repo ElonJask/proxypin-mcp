@@ -30,3 +30,4 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 ### Removed
 
 - Sensitive, non-open-source-ready scripts containing hard-coded credentials and offensive testing payloads.
+- CodeQL workflow and Dependabot config (stop automated security scanning/PR noise).
