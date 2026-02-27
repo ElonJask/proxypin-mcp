@@ -39,6 +39,8 @@ Pre-open-source hardening and standardization for `proxypin-mcp`.
   - maintainer identity and repository URLs in `pyproject.toml`
 - Updated README to a simpler, ProxyPin-style usage flow and documented the required history cache setting.
 - Added an `npx` configuration example for MCP clients.
+- Aligned README sections with ProxyPin structure and split English/Chinese docs.
+- Consolidated example configs to `npx` only.
 
 ### Pending
 

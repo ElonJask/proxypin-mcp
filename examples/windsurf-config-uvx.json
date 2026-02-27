@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "proxypin": {
-      "command": "uvx",
-      "args": ["proxypin-mcp"]
-    }
-  }
-}

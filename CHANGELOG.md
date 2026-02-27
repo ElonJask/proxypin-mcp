@@ -16,6 +16,7 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 - Zero-install MCP integration guidance and examples (`uvx` and `uv --directory ... run`).
 - Automated publishing workflow for PyPI (`.github/workflows/publish.yml`).
 - Simplified README and added `npx` launcher instructions + example.
+- Aligned README structure to ProxyPin style and split into English/Chinese docs.
 
 ### Changed
 
