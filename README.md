@@ -99,7 +99,7 @@ Requirements:
 ### Development
 
 ```bash
-git clone https://github.com/<your-org>/proxypin-mcp.git
+git clone https://github.com/ElonJask/proxypin-mcp.git
 cd proxypin-mcp
 pip install -e ".[dev]"
 
@@ -212,7 +212,7 @@ Windsurf / Cursor / Claude Desktop 都可以使用：
 ### 开发与质量门禁
 
 ```bash
-git clone https://github.com/<your-org>/proxypin-mcp.git
+git clone https://github.com/ElonJask/proxypin-mcp.git
 cd proxypin-mcp
 pip install -e ".[dev]"
 

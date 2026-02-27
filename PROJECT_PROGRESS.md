@@ -33,6 +33,10 @@ Pre-open-source hardening and standardization for `proxypin-mcp`.
 - Added zero-install MCP usage docs and examples:
   - `uvx proxypin-mcp` for registry-distributed usage
   - `uv --directory <repo> run proxypin-mcp` for local checkout usage without `pip install`
+- Added automated publish workflow:
+  - `.github/workflows/publish.yml` for tag-triggered PyPI publishing via trusted publisher
+- Updated package metadata:
+  - maintainer identity and repository URLs in `pyproject.toml`
 
 ### Pending
 

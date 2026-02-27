@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "MCP Server for ProxyPin - Expose HTTP capture data to AI development tools"
 readme = "README.md"
 license = { text = "MIT" }
-authors = [{ name = "ProxyPin MCP", email = "proxypin@example.com" }]
+authors = [{ name = "怜花辞客", email = "jiaeboy@gmail.com" }]
 requires-python = ">=3.10"
 keywords = ["mcp", "proxypin", "http", "proxy", "capture", "ai", "llm"]
 classifiers = [
@@ -23,6 +23,11 @@ dependencies = [
     "mcp>=1.2.0",
     "pydantic>=2.0.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/ElonJask/proxypin-mcp"
+Repository = "https://github.com/ElonJask/proxypin-mcp"
+Issues = "https://github.com/ElonJask/proxypin-mcp/issues"
 
 [project.optional-dependencies]
 dev = [

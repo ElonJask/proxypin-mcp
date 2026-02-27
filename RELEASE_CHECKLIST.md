@@ -20,6 +20,7 @@
 
 ## GitHub Release
 
+- [ ] PyPI trusted publisher configured for `ElonJask/proxypin-mcp` (`.github/workflows/publish.yml`)
 - [ ] create version tag (`vX.Y.Z`)
 - [ ] publish GitHub release notes from changelog
 - [ ] publish package to PyPI (if applicable)
