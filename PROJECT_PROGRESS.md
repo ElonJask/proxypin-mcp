@@ -28,6 +28,7 @@ Registry score remediation for verification, skills, and prompts visibility.
 
 ### Pending
 
+- Fix PyPI Trusted Publisher mapping for future tag-based automated publishing (current run failed with `invalid-publisher`).
 - Trigger/confirm registry rescans on MCP listing platforms.
 
 ## 2026-03-01
