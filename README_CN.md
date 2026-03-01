@@ -18,7 +18,7 @@ ProxyPin MCP Server 基于 Model Context Protocol (MCP)，配合开源项目 [Pr
 1. 安装并打开 ProxyPin
 2. 在 ProxyPin 的“历史”设置中开启“缓存日期”（必须）
 3. 确保已有抓包历史数据
-4. 安装 Node.js（用于 `npx`）与 `uv`（提供 `uvx`）
+4. 安装 Node.js（用于 `npx`）与 `uv`（启动器支持 `uvx` 和 `uv tool run`）
 
 ## 安装方式
 
@@ -27,6 +27,8 @@ ProxyPin MCP Server 基于 Model Context Protocol (MCP)，配合开源项目 [Pr
 ```bash
 npx -y proxypin-mcp@latest
 ```
+
+NPX 启动桥接会优先尝试 `uvx`，不可用时自动回退到 `uv tool run`。
 
 ## 使用方法
 
@@ -107,6 +109,25 @@ npx -y proxypin-mcp@latest
 - `request_id` (string, 必填)
 - `language` (string: `python` | `javascript` | `typescript` | `curl`)
 - `framework` (string: `requests` | `httpx` | `fetch` | `axios`)
+
+## Skills（工具）
+
+- `list_requests`：按条件列出最近 HTTP 请求。
+- `get_request`：按请求 ID 获取单条详情。
+- `search_requests`：按关键字检索 URL/请求体/响应体。
+- `analyze_api`：按域名聚合 API 路径与状态分布。
+- `get_domains`：统计抓包域名与请求方法。
+- `generate_code`：从抓包生成 Python/JS/cURL 调用代码。
+
+## Prompts（提示词）
+
+- `analyze_api_prompt(domain)`：指导 API 结构分析流程。
+- `debug_request_prompt(request_id)`：指导单次请求排障流程。
+
+## Resources（资源）
+
+- `proxypin://requests/recent`：最近请求摘要数据。
+- `proxypin://domains`：域名统计摘要数据。
 
 ## License
 

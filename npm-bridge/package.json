@@ -1,6 +1,6 @@
 {
-  "name": "@elonjask/proxypin-mcp",
-  "version": "0.1.0",
+  "name": "proxypin-mcp",
+  "version": "0.1.1",
   "description": "NPX launcher for proxypin-mcp Python MCP server",
   "license": "MIT",
   "repository": {

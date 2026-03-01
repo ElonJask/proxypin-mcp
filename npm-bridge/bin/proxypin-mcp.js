@@ -5,7 +5,7 @@ const { spawn, spawnSync } = require("node:child_process");
 
 function hasCommand(command) {
   const result = spawnSync(command, ["--version"], { stdio: "ignore" });
-  return result.status === 0;
+  return !result.error && result.status === 0;
 }
 
 function start(command, args) {
@@ -17,10 +17,16 @@ function start(command, args) {
   });
 }
 
-if (!hasCommand("uvx")) {
-  console.error("[proxypin-mcp] `uvx` is required but was not found in PATH.");
-  console.error("[proxypin-mcp] Install uv first: https://docs.astral.sh/uv/getting-started/installation/");
+const passthroughArgs = process.argv.slice(2);
+
+if (hasCommand("uvx")) {
+  start("uvx", ["--from", "proxypin-mcp", "proxypin-mcp", ...passthroughArgs]);
+} else if (hasCommand("uv")) {
+  start("uv", ["tool", "run", "--from", "proxypin-mcp", "proxypin-mcp", ...passthroughArgs]);
+} else {
+  console.error("[proxypin-mcp] `uv` (or `uvx`) is required but was not found in PATH.");
+  console.error(
+    "[proxypin-mcp] Install uv first: https://docs.astral.sh/uv/getting-started/installation/"
+  );
   process.exit(1);
 }
-
-start("uvx", ["--from", "proxypin-mcp", "proxypin-mcp", ...process.argv.slice(2)]);

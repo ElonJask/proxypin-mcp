@@ -1,6 +1,6 @@
 [project]
 name = "proxypin-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP Server for ProxyPin - Expose HTTP capture data to AI development tools"
 readme = "README.md"
 license = { text = "MIT" }

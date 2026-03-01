@@ -19,6 +19,7 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 - Aligned README structure to ProxyPin style and split into English/Chinese docs.
 - Rewrote README to follow markmap-mcp-server style with detailed sections.
 - Set security contact email and removed `uv.lock` from the repo.
+- Added explicit MCP capability sections in README (`Skills`, `Prompts`, `Resources`) for easier registry verification.
 
 ### Changed
 
@@ -26,8 +27,12 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 - Improved HAR parsing robustness and stable auto-generated request IDs.
 - Improved tool input validation and code generation output reliability.
 - Updated package metadata for open-source publishing (author and repository URLs).
+- Renamed npm launcher package from `@elonjask/proxypin-mcp` to `proxypin-mcp` and updated all MCP config examples accordingly.
+- Updated NPX launcher to prefer `uvx` and fallback to `uv tool run` when `uvx` is unavailable.
+- Bumped versions to `0.1.1` (Python package and npm bridge).
 
 ### Removed
 
 - Sensitive, non-open-source-ready scripts containing hard-coded credentials and offensive testing payloads.
 - CodeQL workflow and Dependabot config (stop automated security scanning/PR noise).
+- Unpublished npm package `@elonjask/proxypin-mcp` after successful migration to `proxypin-mcp`.

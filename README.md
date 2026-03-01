@@ -18,7 +18,7 @@ Docs: [English](README.md) | [中文](README_CN.md)
 1. Install and open ProxyPin
 2. In ProxyPin History settings, enable “Cache Date” (required)
 3. Ensure some capture history exists
-4. Node.js (for `npx`) and `uv` (for `uvx`)
+4. Node.js (for `npx`) and `uv` (launcher supports both `uvx` and `uv tool run`)
 
 ## Installation
 
@@ -27,6 +27,8 @@ Docs: [English](README.md) | [中文](README_CN.md)
 ```bash
 npx -y proxypin-mcp@latest
 ```
+
+The NPX bridge tries `uvx` first, then automatically falls back to `uv tool run`.
 
 ## Usage
 
@@ -107,6 +109,25 @@ Parameters:
 - `request_id` (string, required)
 - `language` (string: `python` | `javascript` | `typescript` | `curl`)
 - `framework` (string: `requests` | `httpx` | `fetch` | `axios`)
+
+## Skills (Tools)
+
+- `list_requests`: list recent HTTP requests with filters.
+- `get_request`: fetch one request by ID.
+- `search_requests`: keyword search across URL and body.
+- `analyze_api`: group endpoint patterns for one domain.
+- `get_domains`: summarize captured domains and method counts.
+- `generate_code`: generate Python/JS/cURL snippets from a capture.
+
+## Prompts
+
+- `analyze_api_prompt(domain)`: guide API structure analysis workflow.
+- `debug_request_prompt(request_id)`: guide request debugging workflow.
+
+## Resources
+
+- `proxypin://requests/recent`: recent request summary dataset.
+- `proxypin://domains`: captured domains summary dataset.
 
 ## License
 

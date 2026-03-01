@@ -1,5 +1,30 @@
 # Project Progress
 
+## 2026-03-01 (Patch Release Prep)
+
+### Scope
+
+Registry score remediation for verification, skills, and prompts visibility.
+
+### Completed
+
+- Hardened NPX launcher compatibility:
+  - primary path: `uvx --from proxypin-mcp proxypin-mcp`
+  - fallback path: `uv tool run --from proxypin-mcp proxypin-mcp`
+- Added explicit MCP capability sections to docs:
+  - `Skills (Tools)` in `README.md` and `README_CN.md`
+  - `Prompts` in `README.md` and `README_CN.md`
+  - `Resources` in `README.md` and `README_CN.md`
+- Raised release versions for patch delivery:
+  - Python package `proxypin-mcp`: `0.1.1`
+  - npm bridge `proxypin-mcp`: `0.1.1`
+
+### Pending
+
+- Publish `proxypin-mcp@0.1.1` to npm.
+- Push tag `v0.1.1` to trigger PyPI publish workflow.
+- Trigger/confirm registry rescans on MCP listing platforms.
+
 ## 2026-03-01
 
 ### Scope
