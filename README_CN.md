@@ -1,6 +1,6 @@
 # ProxyPin MCP Server
 
-![NPM Version](https://img.shields.io/npm/v/@elonjask/proxypin-mcp.svg) ![GitHub License](https://img.shields.io/github/license/ElonJask/proxypin-mcp.svg) ![Stars](https://img.shields.io/github/stars/ElonJask/proxypin-mcp.svg)
+![NPM Version](https://img.shields.io/npm/v/proxypin-mcp.svg) ![GitHub License](https://img.shields.io/github/license/ElonJask/proxypin-mcp.svg) ![Stars](https://img.shields.io/github/stars/ElonJask/proxypin-mcp.svg) [![MCP Badge](https://lobehub.com/badge/mcp/elonjask-proxypin-mcp?style=flat)](https://lobehub.com/mcp/elonjask-proxypin-mcp)
 
 ProxyPin MCP Server 基于 Model Context Protocol (MCP)，配合开源项目 [ProxyPin](https://github.com/wanghongenpin/proxypin) 使用，将本地抓包历史提供给 MCP 客户端。
 
@@ -25,7 +25,7 @@ ProxyPin MCP Server 基于 Model Context Protocol (MCP)，配合开源项目 [Pr
 ### npx 启动
 
 ```bash
-npx -y @elonjask/proxypin-mcp@latest
+npx -y proxypin-mcp@latest
 ```
 
 ## 使用方法
@@ -38,7 +38,7 @@ npx -y @elonjask/proxypin-mcp@latest
     "proxypin": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@elonjask/proxypin-mcp@latest"]
+      "args": ["-y", "proxypin-mcp@latest"]
     }
   }
 }

@@ -1,5 +1,25 @@
 # Project Progress
 
+## 2026-03-01
+
+### Scope
+
+Repository hygiene review and README badge optimization.
+
+### Completed
+
+- Added LobeHub MCP badge to top badge row in:
+  - `README.md`
+  - `README_CN.md`
+- Audited tracked files for non-MCP artifacts:
+  - confirmed `dist/` wheel/tar files exist locally but are not tracked by git
+  - no unrelated binary/media artifacts found in tracked files
+- Verified ignore rules include common local-only artifacts (`dist/`, `.venv/`, caches, lockfiles).
+
+### Pending
+
+- Optional: add dedicated "Badges" section in README if more ecosystem badges are added later.
+
 ## 2026-02-27
 
 ### Scope
@@ -53,3 +73,24 @@ Pre-open-source hardening and standardization for `proxypin-mcp`.
 - Replace placeholder security contact email with maintainer-owned mailbox.
 - Run full checks in a clean environment and capture CI badge/status.
 - Confirm final repository naming, topics, and GitHub metadata.
+
+## 2026-02-28
+
+### Scope
+
+NPM package rename migration from scoped name to unscoped name.
+
+### Completed
+
+- Renamed npm bridge package from `@elonjask/proxypin-mcp` to `proxypin-mcp`.
+- Updated installation and MCP config examples in:
+  - `README.md`
+  - `README_CN.md`
+  - `npm-bridge/README.md`
+  - `examples/*.json`
+- Published new package: `proxypin-mcp@0.1.0`.
+- Unpublished old scoped package: `@elonjask/proxypin-mcp` (registry now reports unpublished timestamp).
+
+### Pending
+
+- Optional: add deprecation notice/migration note in GitHub release notes for users who still reference old docs/screenshots.

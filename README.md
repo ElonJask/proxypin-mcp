@@ -1,6 +1,6 @@
 # ProxyPin MCP Server
 
-![NPM Version](https://img.shields.io/npm/v/@elonjask/proxypin-mcp.svg) ![GitHub License](https://img.shields.io/github/license/ElonJask/proxypin-mcp.svg) ![Stars](https://img.shields.io/github/stars/ElonJask/proxypin-mcp.svg)
+![NPM Version](https://img.shields.io/npm/v/proxypin-mcp.svg) ![GitHub License](https://img.shields.io/github/license/ElonJask/proxypin-mcp.svg) ![Stars](https://img.shields.io/github/stars/ElonJask/proxypin-mcp.svg) [![MCP Badge](https://lobehub.com/badge/mcp/elonjask-proxypin-mcp?style=flat)](https://lobehub.com/mcp/elonjask-proxypin-mcp)
 
 ProxyPin MCP Server is based on the Model Context Protocol (MCP). It works with the open source project [ProxyPin](https://github.com/wanghongenpin/proxypin) to expose your local capture history to MCP-capable clients.
 
@@ -25,7 +25,7 @@ Docs: [English](README.md) | [中文](README_CN.md)
 ### Run with npx
 
 ```bash
-npx -y @elonjask/proxypin-mcp@latest
+npx -y proxypin-mcp@latest
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ Add the following configuration to your MCP client configuration file:
     "proxypin": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@elonjask/proxypin-mcp@latest"]
+      "args": ["-y", "proxypin-mcp@latest"]
     }
   }
 }
