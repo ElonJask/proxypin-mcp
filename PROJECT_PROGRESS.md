@@ -18,11 +18,17 @@ Registry score remediation for verification, skills, and prompts visibility.
 - Raised release versions for patch delivery:
   - Python package `proxypin-mcp`: `0.1.1`
   - npm bridge `proxypin-mcp`: `0.1.1`
+- Pushed release commit to `main` and created release tag:
+  - commit: `af36636`
+  - tag: `v0.1.1`
+- Triggered GitHub Actions publish workflow:
+  - run: `https://github.com/ElonJask/proxypin-mcp/actions/runs/22535201781`
 
 ### Pending
 
-- Publish `proxypin-mcp@0.1.1` to npm.
-- Push tag `v0.1.1` to trigger PyPI publish workflow.
+- Resolve npm publish authentication on local machine (`ENEEDAUTH`).
+- Fix PyPI Trusted Publisher mapping (`invalid-publisher` for `repo:ElonJask/proxypin-mcp:environment:pypi`).
+- Re-run npm publish and re-dispatch PyPI publish after credentials/trusted publisher fix.
 - Trigger/confirm registry rescans on MCP listing platforms.
 
 ## 2026-03-01
