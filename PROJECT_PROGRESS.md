@@ -23,12 +23,11 @@ Registry score remediation for verification, skills, and prompts visibility.
   - tag: `v0.1.1`
 - Triggered GitHub Actions publish workflow:
   - run: `https://github.com/ElonJask/proxypin-mcp/actions/runs/22535201781`
+- Published `proxypin-mcp@0.1.1` to npm using maintainer token.
+- Published `proxypin-mcp==0.1.1` to PyPI using API token (`uv publish --trusted-publishing never`).
 
 ### Pending
 
-- Resolve npm publish authentication on local machine (`ENEEDAUTH`).
-- Fix PyPI Trusted Publisher mapping (`invalid-publisher` for `repo:ElonJask/proxypin-mcp:environment:pypi`).
-- Re-run npm publish and re-dispatch PyPI publish after credentials/trusted publisher fix.
 - Trigger/confirm registry rescans on MCP listing platforms.
 
 ## 2026-03-01
